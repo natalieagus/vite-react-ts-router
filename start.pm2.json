@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "vite-react-router-app",
+      "script": "npm",
+      "args": "start"
+    }
+  ]
+}

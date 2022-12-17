@@ -12,10 +12,12 @@ Then edit all `.tsx` files to match the project's. Also update `App.css`.
 add `<BrowserRouter basename={import.meta.env.BASE_URL}>` to `main.tsx`
 
 serve with
+
 ```
 npm run build; node server.js
 ```
-visit `http://localhost:9000/vite-react-ts-router/`, clicking on converter should route to `http://localhost:9000/vite-react-ts-router/converter`
+
+visit `http://localhost:8100/vite-react-ts-router/`, clicking on converter should route to `http://localhost:8100/vite-react-ts-router/converter`
 
 guide:
 https://create-react-app.dev/docs/deployment/#other-solutions
