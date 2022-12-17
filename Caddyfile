@@ -1,0 +1,6 @@
+localhost:3000 {
+	root ./dist
+	try_files {path} index.html
+	encode gzip zstd
+	file_server 
+}
