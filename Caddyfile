@@ -1,7 +1,15 @@
-localhost:3000 {
-	handle_path /vite-react-ts-router* {
+localhost:8080 {
+    reverse_proxy :3000
+}
+
+http://localhost:3000 {
+	redir /vite-react-ts-router /vite-react-ts-router/
+	handle_path /vite-react-ts-router/* {
 		root * ./dist
-		try_files {path} index.html
-		file_server 
+		try_files {path} /index.html
+		file_server
+	}
+	handle {
+		respond "URI not found. Please use /vite-react-ts-router"
 	}
 }
