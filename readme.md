@@ -8,3 +8,7 @@ touch src/components/Converter.tsx
 ```
 
 Then edit all `.tsx` files to match the project's. Also update `App.css`.
+
+caddy run --watch
+
+https://localhost:8080/vite-react-ts-router/
