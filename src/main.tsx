@@ -6,6 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 
 const base_url = import.meta.env.BASE_URL;
 
+const base_url_bare = import.meta.env.VITE_BASE_URL;
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter basename={base_url}>
