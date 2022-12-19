@@ -32,6 +32,6 @@ jobs:
             git checkout master 
             git fetch origin master 
             git reset --hard origin/master
-            npm install
-            npm run build-demo
+            ~/.nvm/versions/node/v16.18.1/bin/npm install
+            ~/.nvm/versions/node/v16.18.1/bin/npm run build-demo
             echo "$(date) GA exits EC2\n" >> ~/output.txt
