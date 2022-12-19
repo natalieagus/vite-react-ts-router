@@ -10,6 +10,6 @@ export default defineConfig(({ command, mode }) => {
       port: 8100,
       // proxy: 'http://localhost:3001',  // TODO: Shift to config file
     },
-    base: `/${env.VITE_BASE_URL}`,
+    base: `${env.VITE_BASE_URL}`,
   };
 });
