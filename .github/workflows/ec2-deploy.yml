@@ -27,5 +27,11 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
+            echo "$(date) Hello from Github Actions" >> ~/output.txt
             cd ${{ secrets.PROD_DEPLOY_DIR }}
-            echo "$(date) Hello from ec2" >> output.txt
+            git checkout master 
+            git fetch origin master 
+            git reset --hard origin/master
+            npm install
+            npm run build-demo
+            echo "$(date) GA exits EC2\n" >> ~/output.txt
