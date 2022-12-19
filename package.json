@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build-prod": "tsc && vite build && sudo rm -rf /srv/dist && sudo mv dist /srv && sudo systemctl reload caddy",
     "preview": "vite preview"
   },
   "dependencies": {
