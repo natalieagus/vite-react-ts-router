@@ -4,6 +4,8 @@ import App from "./App";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 
+const base_url_bare = import.meta.env.VITE_BASE_URL;
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter basename={import.meta.env.BASE_URL}>
