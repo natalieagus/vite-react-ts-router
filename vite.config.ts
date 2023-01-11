@@ -12,5 +12,10 @@ export default defineConfig(({ command, mode }) => {
       // proxy: 'http://localhost:3001',  // TODO: Shift to config file
     },
     base: `/${base_url}/`,
+    test: {
+      environment: "jsdom",
+      globals: true,
+      setupFiles: "./tests/setup.js",
+    },
   };
 });

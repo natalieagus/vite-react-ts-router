@@ -9,14 +9,18 @@
     "build-prod": "tsc && vite build && sudo rm -rf /srv/dist && sudo mv dist /srv && sudo systemctl reload caddy",
     "build-demo": "vite build && sudo rm -rf /srv/dist && sudo mv dist /srv && sudo systemctl reload caddy",
     "preview": "vite preview",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test-vite": "vitest run"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "express": "^4.18.2",
     "path": "^0.12.7",
     "pm2": "^5.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vitest": "^0.27.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
@@ -24,6 +28,7 @@
     "@types/react-dom": "^18.0.9",
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^3.0.0",
+    "jsdom": "^21.0.0",
     "react-router-dom": "^6.5.0",
     "typescript": "^4.9.3",
     "vite": "^4.0.0"
